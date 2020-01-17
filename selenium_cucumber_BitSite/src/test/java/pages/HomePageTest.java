@@ -31,5 +31,11 @@ public class HomePageTest {
 	@FindBy(css = "[class='main-navigation'] li a")
 	public List<WebElement> menubarName;
 	
+	@FindBy(css ="[data-id='6d0d9cb'] [class ='elementor-button-wrapper'] a")
+	public WebElement FirstRegButton;
+	
+
+	
+	
 	
 }
