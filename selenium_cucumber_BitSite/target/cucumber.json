@@ -1,0 +1,184 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1463522406,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is on home page",
+            "match": {
+              "location": "HomePage_StepDefs.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-17T00:41:10.040Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1758156124,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "",
+        "description": "",
+        "id": "testing-home-page;",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7878360,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "check the title",
+            "match": {
+              "location": "HomePage_StepDefs.check_the_title()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 219381851,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User click on Logo",
+            "match": {
+              "location": "HomePage_StepDefs.user_click_on_Logo()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17159756,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Verify number of Menu is 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 25
+                }
+              ],
+              "location": "HomePage_StepDefs.verify_number_of_Menu_is(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 32633,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Verify items of Menu bar",
+            "match": {
+              "location": "HomePage_StepDefs.verify_items_of_Menu_bar()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17334,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Verify Registration button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Registration_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16669,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Verify Our Service headers",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Our_Service_headers()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16353,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Verify Learn More button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Learn_More_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16324,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify Our Boot Camps headers",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Our_Boot_Camps_headers()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17408,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Verify Second Registration button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Second_Registration_button()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test_home_page"
+          }
+        ]
+      }
+    ],
+    "name": "Testing Home Page",
+    "description": "  Testing home page",
+    "id": "testing-home-page",
+    "keyword": "Feature",
+    "uri": "classpath:features/home_page_testing.feature",
+    "tags": [
+      {
+        "name": "@test_home_page",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
