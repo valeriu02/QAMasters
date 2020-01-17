@@ -42,13 +42,14 @@ public class HomePage_StepDefs {
 	@Then("Verify number of Menu is {int}")
 	public void verify_number_of_Menu_is(Integer expectedTopMenu) {
 		 Integer actualTopMenu =  hpt.menubar.size();
-		// System.out.println(actualTopMenu);
 		 assertEquals(expectedTopMenu, actualTopMenu);	  
 	}
 
 	@Then("Verify items of Menu bar")
 	public void verify_items_of_Menu_bar() {
 //	   List<Object> 
+		String  handle= driver.getWindowHandle();
+		System.out.println(handle);
 		
 	}
 
