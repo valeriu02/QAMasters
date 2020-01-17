@@ -9,8 +9,6 @@ import io.cucumber.java.en.*;
 import junit.framework.*;
 import pages.BostonIvyTechHomePage;
 import pages.HomePageTest;
-import pages.ShopNew;
-import pages.TrueCarHomePage;
 import utils.SingletonBrowser;
 
 
@@ -48,8 +46,8 @@ public class HomePage_StepDefs {
 	@Then("Verify items of Menu bar")
 	public void verify_items_of_Menu_bar() {
 //	   List<Object> 
-		String  handle= driver.getWindowHandle();
-		System.out.println(handle);
+	
+		
 		
 	}
 
