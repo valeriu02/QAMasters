@@ -2,6 +2,7 @@ package stepDefs;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -71,20 +72,21 @@ public class HomePage_StepDefs {
 	@Then("Verify QA Testing Boot Camps Learn More button")
 	public void verify_QA_Testing_Boot_Camps_Learn_More_button() {
 		hpt.qaTestingLM.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "Services – Boston Ivy Tech";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		assertEquals(expectedTitle, actualTitle);
+		System.out.println(actualTitle);
 	}
 
 	@Then("Verify Software Testing Learn More button")
 	public void verify_Software_Testing_Learn_More_button() {
 		hp.goToHomePage(driver);
 		hpt.softwareTestingLM.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "Services – Boston Ivy Tech";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		
+		assertEquals(expectedTitle, actualTitle);
+		System.out.println(actualTitle);
 		
 	}
 
@@ -92,15 +94,20 @@ public class HomePage_StepDefs {
 	public void verify_Onsite_Trainings_Learn_More_button() {
 		hp.goToHomePage(driver);
 		hpt.onsiteTrainingsLM.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "Services – Boston Ivy Tech";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		assertEquals(expectedTitle, actualTitle);
+		System.out.println(actualTitle);
 	}
 
 	@Then("Verify Our Boot Camps headers")
 	public void verify_Our_Boot_Camps_headers() {
-
+		hp.goToHomePage(driver);
+		String actualTitle = hpt.ourBootCampBottomLogo.getText().toString();
+		String expectedTitle = "OUR BOOT CAMPS";
+		System.out.println(actualTitle);
+		assertEquals(expectedTitle, actualTitle);
+		
 	}
 
 	@Then("Verify Second Registration button")
@@ -146,10 +153,10 @@ public class HomePage_StepDefs {
 	public void verify_Home_button() {
 		hp.goToHomePage(driver);
 		hpt.homeButton.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "Boston Ivy Tech – Your Signature in IT";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		assertEquals(expectedTitle, actualTitle);
+		System.out.println(actualTitle);
 		
 	}
 
@@ -157,40 +164,41 @@ public class HomePage_StepDefs {
 	public void verify_About_button() {
 		hp.goToHomePage(driver);
 		hpt.aboutButton.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "About – Boston Ivy Tech";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		assertEquals(expectedTitle, actualTitle);
+		System.out.println(actualTitle);
 	}
 
 	@Then("Verify Services button")
 	public void verify_Services_button() {
 		hp.goToHomePage(driver);
 		hpt.servicesButton.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "Services – Boston Ivy Tech";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		assertEquals(expectedTitle, actualTitle);
+		System.out.println(actualTitle);
 	}
 
 	@Then("Verify Boot Camp button")
 	public void verify_Boot_Camp_button() {
 		hp.goToHomePage(driver);
 		hpt.bootCampButton.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "Boot Camps – Boston Ivy Tech";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		assertEquals(expectedTitle, actualTitle);
+		System.out.println(actualTitle);
 	}
 
 	@Then("Verify Contanct button")
 	public void verify_Contanct_button() {
 		hp.goToHomePage(driver);
 		hpt.contactButton.click();
-		String actialTitle = driver.getTitle();
+		String actualTitle = driver.getTitle();
 		String expectedTitle = "Contact – Boston Ivy Tech";
-		assertEquals(expectedTitle, actialTitle);
-		System.out.println(actialTitle);
+		assertEquals(expectedTitle, actualTitle);
+		assertTrue(actualTitle.contains("Contact"));
+		System.out.println(actualTitle);
 	}
 
 }

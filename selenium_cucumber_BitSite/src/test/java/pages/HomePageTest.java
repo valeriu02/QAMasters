@@ -67,6 +67,8 @@ public class HomePageTest {
 	
 	@FindBy(css ="[id = 'menu-item-150']")
 	public WebElement contactButton;
+	@FindBy(css = "[data-id = 'a9a69dd'] [class = 'elementor-heading-title elementor-size-default']")
+	public WebElement ourBootCampBottomLogo;
 
 	
 	
