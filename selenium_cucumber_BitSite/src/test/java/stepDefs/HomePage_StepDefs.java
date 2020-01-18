@@ -2,6 +2,7 @@ package stepDefs;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,9 +71,11 @@ public class HomePage_StepDefs {
 	public void verify_QA_Testing_Boot_Camps_Learn_More_button() {
 		hpt.qaTestingLM.click();
 		String actualTitle = driver.getTitle();
+
 		
 		assertTrue(actualTitle.contains("Services"));
 		
+
 	}
 
 	@Then("Verify Software Testing Learn More button")
@@ -80,7 +83,10 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.softwareTestingLM.click();
 		String actualTitle = driver.getTitle();
+
+
 		assertTrue(actualTitle.contains("Services"));
+
 		
 	}
 
@@ -89,12 +95,19 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.onsiteTrainingsLM.click();
 		String actualTitle = driver.getTitle();
+
 		assertTrue(actualTitle.contains("Services"));
+
 	}
 
 	@Then("Verify Our Boot Camps headers")
 	public void verify_Our_Boot_Camps_headers() {
-
+		hp.goToHomePage(driver);
+		String actualTitle = hpt.ourBootCampBottomLogo.getText().toString();
+		String expectedTitle = "OUR BOOT CAMPS";
+		System.out.println(actualTitle);
+		assertEquals(expectedTitle, actualTitle);
+		
 	}
 
 	@Then("Verify Second Registration button")
@@ -141,8 +154,10 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.homeButton.click();
 		String actualTitle = driver.getTitle();
+
 		String expectedTitle = "Boston Ivy Tech  Your Signature in IT";
 		assertTrue(actualTitle.contains("Boston Ivy Tech"));
+
 		
 	}
 
@@ -151,8 +166,10 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.aboutButton.click();
 		String actualTitle = driver.getTitle();
+
 		String expectedTitle = "About  Boston Ivy Tech";
 		assertTrue(actualTitle.contains("About"));
+
 	}
 
 	@Then("Verify Services button")
@@ -160,8 +177,10 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.servicesButton.click();
 		String actualTitle = driver.getTitle();
+
 		String expectedTitle = "Services  Boston Ivy Tech";
 		assertTrue(actualTitle.contains("Services"));
+
 	}
 
 	@Then("Verify Boot Camp button")
@@ -169,8 +188,10 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.bootCampButton.click();
 		String actualTitle = driver.getTitle();
+
 		String expectedTitle = "Boot Camps  Boston Ivy Tech";
 		assertTrue(actualTitle.contains("Boot Camps"));
+
 	}
 
 	@Then("Verify Contanct button")
@@ -178,8 +199,10 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.contactButton.click();
 		String actualTitle = driver.getTitle();
+
 		String expectedTitle = "Contact  Boston Ivy Tech";
 		assertTrue(actualTitle.contains("Contact"));
+
 	}
 
 }
