@@ -34,7 +34,7 @@ public class HomePage_StepDefs {
 
 	@Given("check the title")
 	public void check_the_title() {
-		String ExpectedTitle = "Boston Ivy Tech â€“ Your Signature in IT";
+		String ExpectedTitle = "Boston Ivy Tech – Your Signature in IT";
 		String ActualTitle = driver.getTitle();
 		assertEquals(ExpectedTitle, ActualTitle);
 	}
@@ -59,8 +59,72 @@ public class HomePage_StepDefs {
 
 	}
 
+	@Then("Verify Our Service headers")
+	public void verify_Our_Service_headers() {
+		String actualResults = hpt.ourServices.getText().toString();
+		System.out.println(actualResults);
+		String expectedResults = "OUR SERVICES";
+		assertEquals(expectedResults, actualResults);
+
+	}
+
+	@Then("Verify QA Testing Boot Camps Learn More button")
+	public void verify_QA_Testing_Boot_Camps_Learn_More_button() {
+		hpt.qaTestingLM.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "Services – Boston Ivy Tech";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
+	}
+
+	@Then("Verify Software Testing Learn More button")
+	public void verify_Software_Testing_Learn_More_button() {
+		hp.goToHomePage(driver);
+		hpt.softwareTestingLM.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "Services – Boston Ivy Tech";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
+		
+	}
+
+	@Then("Verify Onsite Trainings Learn More button")
+	public void verify_Onsite_Trainings_Learn_More_button() {
+		hp.goToHomePage(driver);
+		hpt.onsiteTrainingsLM.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "Services – Boston Ivy Tech";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
+	}
+
+	@Then("Verify Our Boot Camps headers")
+	public void verify_Our_Boot_Camps_headers() {
+
+	}
+
+	@Then("Verify Second Registration button")
+	public void verify_Second_Registration_button() throws InterruptedException {
+		hp.goToHomePage(driver);
+		String parentWinHandle = driver.getWindowHandle();
+		hpt.SecondRegButton.click();
+		Set<String> winHandles = driver.getWindowHandles();
+		for (String handle : winHandles) {
+			if (!handle.equals(parentWinHandle)) {
+				driver.switchTo().window(handle);
+				Thread.sleep(1000);
+				System.out.println("Title of the new window: " + driver.getTitle());
+			}
+		}
+
+		String actualTitle = driver.getTitle();
+		String expectedTitle = "Class Registration – Boston Ivy Tech";
+		assertEquals(expectedTitle, actualTitle);
+	}
+
 	@Then("Verify Registration button")
 	public void verify_Registration_button() throws InterruptedException {
+		hp.goToHomePage(driver);
 		String parentWinHandle = driver.getWindowHandle();
 		hpt.FirstRegButton.click();
 		Set<String> winHandles = driver.getWindowHandles();
@@ -73,29 +137,60 @@ public class HomePage_StepDefs {
 		}
 
 		String actualTitle = driver.getTitle();
-		String expectedTitle = "Class Registration â€“ Boston Ivy Tech";
+		String expectedTitle = "Class Registration – Boston Ivy Tech";
 		assertEquals(expectedTitle, actualTitle);
+
+	}
 	
+	@Then("Verify Home button")
+	public void verify_Home_button() {
+		hp.goToHomePage(driver);
+		hpt.homeButton.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "Boston Ivy Tech – Your Signature in IT";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
+		
 	}
 
-	@Then("Verify Our Service headers")
-	public void verify_Our_Service_headers() {
-
+	@Then("Verify About button")
+	public void verify_About_button() {
+		hp.goToHomePage(driver);
+		hpt.aboutButton.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "About – Boston Ivy Tech";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
 	}
 
-	@Then("Verify Learn More button")
-	public void verify_Learn_More_button() {
-
+	@Then("Verify Services button")
+	public void verify_Services_button() {
+		hp.goToHomePage(driver);
+		hpt.servicesButton.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "Services – Boston Ivy Tech";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
 	}
 
-	@Then("Verify Our Boot Camps headers")
-	public void verify_Our_Boot_Camps_headers() {
-
+	@Then("Verify Boot Camp button")
+	public void verify_Boot_Camp_button() {
+		hp.goToHomePage(driver);
+		hpt.bootCampButton.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "Boot Camps – Boston Ivy Tech";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
 	}
 
-	@Then("Verify Second Registration button")
-	public void verify_Second_Registration_button() {
-
+	@Then("Verify Contanct button")
+	public void verify_Contanct_button() {
+		hp.goToHomePage(driver);
+		hpt.contactButton.click();
+		String actialTitle = driver.getTitle();
+		String expectedTitle = "Contact – Boston Ivy Tech";
+		assertEquals(expectedTitle, actialTitle);
+		System.out.println(actialTitle);
 	}
 
 }
