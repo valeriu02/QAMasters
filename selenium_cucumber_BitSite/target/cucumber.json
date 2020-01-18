@@ -1,9 +1,9 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 1882942503,
+              "duration": 1530730500,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "User is on home page",
             "match": {
               "location": "HomePage_StepDefs.user_is_on_home_page()"
@@ -24,11 +24,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-01-17T02:40:21.257Z",
+        "start_timestamp": "2020-01-18T14:55:14.020Z",
         "before": [
           {
             "result": {
-              "duration": 2166548709,
+              "duration": 4473873700,
               "status": "passed"
             },
             "match": {
@@ -36,19 +36,30 @@
             }
           }
         ],
-        "line": 9,
+        "line": 8,
         "name": "",
         "description": "",
         "id": "testing-home-page;",
+        "after": [
+          {
+            "result": {
+              "duration": 813036500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 8390483,
+              "duration": 15506900,
               "status": "passed"
             },
-            "line": 10,
+            "line": 9,
             "name": "check the title",
             "match": {
               "location": "HomePage_StepDefs.check_the_title()"
@@ -57,10 +68,10 @@
           },
           {
             "result": {
-              "duration": 209305889,
+              "duration": 350339600,
               "status": "passed"
             },
-            "line": 11,
+            "line": 10,
             "name": "User click on Logo",
             "match": {
               "location": "HomePage_StepDefs.user_click_on_Logo()"
@@ -69,10 +80,10 @@
           },
           {
             "result": {
-              "duration": 21320919,
+              "duration": 30518000,
               "status": "passed"
             },
-            "line": 12,
+            "line": 11,
             "name": "Verify number of Menu is 5",
             "match": {
               "arguments": [
@@ -87,10 +98,10 @@
           },
           {
             "result": {
-              "duration": 85073305,
+              "duration": 141672300,
               "status": "passed"
             },
-            "line": 13,
+            "line": 12,
             "name": "Verify items of Menu bar",
             "match": {
               "location": "HomePage_StepDefs.verify_items_of_Menu_bar()"
@@ -99,22 +110,10 @@
           },
           {
             "result": {
-              "duration": 4479835391,
+              "duration": 54116800,
               "status": "passed"
             },
-            "line": 14,
-            "name": "Verify Registration button",
-            "match": {
-              "location": "HomePage_StepDefs.verify_Registration_button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 52267,
-              "status": "passed"
-            },
-            "line": 15,
+            "line": 13,
             "name": "Verify Our Service headers",
             "match": {
               "location": "HomePage_StepDefs.verify_Our_Service_headers()"
@@ -123,19 +122,43 @@
           },
           {
             "result": {
-              "duration": 46425,
+              "duration": 1406149700,
               "status": "passed"
             },
-            "line": 16,
-            "name": "Verify Learn More button",
+            "line": 14,
+            "name": "Verify QA Testing Boot Camps Learn More button",
             "match": {
-              "location": "HomePage_StepDefs.verify_Learn_More_button()"
+              "location": "HomePage_StepDefs.verify_QA_Testing_Boot_Camps_Learn_More_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 39282,
+              "duration": 787291800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Verify Software Testing Learn More button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Software_Testing_Learn_More_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 657071900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Verify Onsite Trainings Learn More button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Onsite_Trainings_Learn_More_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76300,
               "status": "passed"
             },
             "line": 17,
@@ -147,7 +170,7 @@
           },
           {
             "result": {
-              "duration": 27183,
+              "duration": 3352426300,
               "status": "passed"
             },
             "line": 18,
@@ -156,6 +179,78 @@
               "location": "HomePage_StepDefs.verify_Second_Registration_button()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3837815300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Verify Registration button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Registration_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 706403300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify Home button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Home_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 861621600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Verify About button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_About_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 734978200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Verify Services button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Services_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1076300400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Verify Boot Camp button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Boot_Camp_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1093661300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Verify Contanct button",
+            "match": {
+              "location": "HomePage_StepDefs.verify_Contanct_button()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
@@ -175,7 +270,7 @@
         "name": "@test_home_page",
         "type": "Tag",
         "location": {
-          "line": 2,
+          "line": 1,
           "column": 1
         }
       }
