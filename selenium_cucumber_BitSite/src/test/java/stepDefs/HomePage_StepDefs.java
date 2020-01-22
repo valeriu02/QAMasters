@@ -83,8 +83,6 @@ public class HomePage_StepDefs {
 		hp.goToHomePage(driver);
 		hpt.softwareTestingLM.click();
 		String actualTitle = driver.getTitle();
-
-
 		assertTrue(actualTitle.contains("Services"));
 
 		

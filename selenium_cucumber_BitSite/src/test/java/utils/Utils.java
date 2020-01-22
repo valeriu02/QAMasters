@@ -18,12 +18,19 @@ public class Utils {
 		WebDriver driver = sb.getDriver();
 		
 		
-		list = driver.findElements(By.cssSelector("[class='main-navigation'] li"));
+		list = driver.findElements(By.cssSelector("[class='elementor-widget-container'] h2"));
 		List<String> list1 = new ArrayList<String>();
-
 		list.forEach(s -> list1.add(s.getText()));
-
 		return list1;
 
 	}
-} 
+	
+	
+	
+
+	}
+
+
+
+
+
