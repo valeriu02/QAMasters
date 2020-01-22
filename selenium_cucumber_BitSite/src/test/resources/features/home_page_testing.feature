@@ -5,7 +5,7 @@ Feature: Testing Home Page
   Background: 
     Given User is on home page
 
- 
+  Scenario: Steps to check Homepage functionalty
     Given check the title
     Then User click on Logo
     Then Verify number of Menu is 5
@@ -22,4 +22,3 @@ Feature: Testing Home Page
     Then Verify Services button
     Then Verify Boot Camp button
     Then Verify Contanct button
-    
