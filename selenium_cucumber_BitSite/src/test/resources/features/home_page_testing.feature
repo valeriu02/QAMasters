@@ -5,7 +5,7 @@ Feature: Testing Home Page
   Background: 
     Given User is on home page
 
-  Scenario: 
+ 
     Given check the title
     Then User click on Logo
     Then Verify number of Menu is 5
