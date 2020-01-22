@@ -18,7 +18,7 @@ public class Utils {
 		WebDriver driver = sb.getDriver();
 		
 		
-		list = driver.findElements(By.cssSelector("[class='main-navigation'] li"));
+		
 		List<String> list1 = new ArrayList<String>();
 
 		list.forEach(s -> list1.add(s.getText()));
