@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(plugin = {"json:target/cucumber.json" }, 
 				features = "classpath:features", 
 				glue = { "stepDefs" },
-                tags = {""},
+                tags = {"@test_registration_page"},
                  dryRun = false    ) 
 
 public class TestRunner {
