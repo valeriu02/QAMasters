@@ -61,6 +61,7 @@ public void check_the_title_of_the_page() {
 	@Then("User enter Phone Number {string}")
 	public void user_enter_Phone_Number(String string) {
 		rp.phone.sendKeys(string);
+		
 	}
 
 	@Then("User select if he is Authorized to work in US {string}")
@@ -73,24 +74,26 @@ public void check_the_title_of_the_page() {
 
 	@Then("User select if he have Past Programming Experience {string}")
 	public void user_select_if_he_have_Past_Programming_Experience(String result) throws InterruptedException {
-		Thread.sleep(2000);
+		
 		if(result.contentEquals("Yes")) {
 			rp.PPE.get(0).click();
 		}
 		else rp.PPE.get(1).click();
+		System.out.println(rp.PPE.toString());
 	}
 	
 
 	@Then("User click on Subbmit Button")
-	public void user_click_on_Subbmit_Button() {
-	   rp.SubmitButton.click();
+	public void user_click_on_Subbmit_Button() throws InterruptedException {
+		
+		rp.SubmitButton.click();
 	}
 
 	@Then("Verify submiting by message")
 	public void verify_submiting_by_message() throws InterruptedException {
-		Thread.sleep(2000);
-	String actualText =   rp.message.getText();  
-	assertTrue(actualText.contains("Form has been submitted successfully."));
+		Thread.sleep(3000);
+		String actualText =rp.message.getText();  
+	assertTrue(actualText.contains("Form has been submitted successfully"));
 	
 	}
 

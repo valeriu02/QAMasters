@@ -44,7 +44,7 @@ public class RegistrationPage {
 	@FindBy (css = "[id='7'] label")
 	public List<WebElement>  AUS;
 	
-	@FindBy (css = "[id='8'] label")
+	@FindBy (css = "[name='_aol_app_8']")
 	public List<WebElement>  PPE;
 	
 	@FindBy (css = "[type='submit']")
